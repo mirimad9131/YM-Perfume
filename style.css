@@ -1,0 +1,195 @@
+:root {
+    --bg: #0a0a0c;
+    --gold: #d4af37;
+    --gold-soft: #fcf6ba;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(212, 175, 55, 0.2);
+    --text: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Garamond', serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+/* Logo Styling */
+.brand-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+}
+
+/* Hero Header */
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    letter-spacing: 15px;
+    background: linear-gradient(to right, #bf953f, var(--gold-soft), var(--gold), #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+}
+
+/* Performance Badges */
+.metrics {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+}
+
+.metric-item {
+    border: 1px solid var(--gold);
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: var(--gold-soft);
+}
+
+/* Product Grid */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+/* Scroll Animation Class */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
+    padding: 30px;
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--gold);
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+h2 { color: var(--gold); margin-bottom: 10px; font-size: 1.8rem; }
+
+.analysis {
+    margin: 20px 0;
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.pros { color: #4ade80; }
+.cons { color: #f87171; }
+
+.analysis ul { list-style: none; margin-top: 5px; }
+.analysis li::before { content: "• "; margin-right: 5px; }
+
+/* Buttons */
+.btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-wa { background: #25d366; color: white; }
+.btn-ep { background: var(--gold); color: #000; }
+.btn:hover { opacity: 0.8; transform: scale(1.02); }
+
+/* Suppliers Section */
+.suppliers {
+    background: #111;
+    padding: 80px 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.supplier-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.supplier-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.safety-badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
